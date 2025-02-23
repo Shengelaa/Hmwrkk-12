@@ -1,0 +1,9 @@
+body {
+  background-color: bisque;
+}
+
+.card {
+  border: 1px solid black;
+  border-radius: 2px;
+  margin-bottom: 2px;
+}

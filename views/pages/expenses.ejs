@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/expense.css" />
+  </head>
+  <body>
+    <header>this is midter2</header>
+
+    <a href="/create-expense">Create new Expense</a>
+
+    <% expenses.forEach(expense => { %>
+    <div class="card">
+      <h2>name: <%= expense.title %></h2>
+      <p>category: <%= expense.category %></p>
+      <a href="/expenses-list/<%= expense.id %>">Show details</a>
+      <button onclick="deleteExpense('<%= expense.id %>')">Delete</button>
+    </div>
+
+    <% })%>
+    <script src="/js/deleteExpense.js"></script>
+  </body>
+</html>
